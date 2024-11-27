@@ -25,7 +25,7 @@ To run this project locally, you need to have the following installed:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/interactive-resume.git
+   git clone https://github.com/fadil369/interactive-resume.git
    cd interactive-resume
    ```
 
