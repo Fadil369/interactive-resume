@@ -1,0 +1,44 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    reviewers:
+      - "yourusername"
+    assignees:
+      - "yourusername"
+    labels:
+      - "dependencies"
+      - "automated"
+  
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    reviewers:
+      - "fadil369"
+    assignees:
+      - "fadil369"
+    labels:
+      - "ci"
+      - "automated"
+
+automerged_updates:
+  - match:
+      dependency_type: "all"
+      update_type: "security"
+
+ignore:
+  - dependency-name: "react"
+    versions: ["^18.0.0"]
+  - dependency-name: "tailwindcss"
+    versions: ["^3.0.0"]
